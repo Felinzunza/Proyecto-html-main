@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/estilobarra.css" />
+    <link rel="stylesheet" href="css/estilogeneral.css" />
+  </head>
+  <body>
+    <div class="contenido mt-5">
+      <div class="card shadow">
+        <div class="card-body">
+          <h1 class="card-title text-center mb-4">Perfil de Usuario</h1>
+
+          <div class="row align-items-center">
+            <!-- Columna 1: Información Personal -->
+            <div class="col-md-4">
+              <h5>Información Personal</h5>
+              <p><strong>Tipo de Usuario:</strong> Cliente</p>
+              <p><strong>Nombre y Apellido:</strong> Juan Pérez González</p>
+              <p><strong>RUN:</strong> 12.345.678-9</p>
+              <p><strong>Fecha de Nacimiento:</strong> 15/03/1985</p>
+              <p><strong>Correo Electrónico:</strong> juan.perez@correo.cl</p>
+            </div>
+
+            <!-- Columna 2: Dirección -->
+            <div class="col-md-4">
+              <h5>Dirección</h5>
+              <p><strong>Región:</strong> Metropolitana de Santiago</p>
+              <p><strong>Comuna:</strong> Santiago</p>
+              <p>
+                <strong>Dirección:</strong> Av. Libertador Bernardo O'Higgins
+                123
+              </p>
+            </div>
+
+            <!-- Columna 3: Foto -->
+            <div class="col-md-4 text-center">
+              <h5>Foto</h5>
+              <img
+                src="foto.jpg"
+                alt="Foto de Juan Pérez"
+                class="img-fluid rounded shadow-sm"
+                style="max-height: 200px"
+              />
+            </div>
+            <div class="mt-2 text-center">
+              <a href="editarusuario.html?rut=43434312-1&nombre=Victor&apellido=Jara&mail=VitotoJ@gmail.com&fecha=1910-02-01&direccion=Calle+de+mentira+123&tipousuario=Vendedor"  class="btn btn-md btn-editar"
+                >Editar</a
+              >
+
+              <a href="listausuarios.html" class="btn btn-md btn-secondary"
+                >Volver</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <h2>⚡LEVEL-UP</h2>
+      <ul>
+        <li><a href="homedmin.html" target="contenido">Home</a></li>
+        <li><a href="listausuarios.html" target="contenido">Usuarios</a></li>
+        <li><a href="listaproductos.html" target="contenido">Productos</a></li>
+        <li><a href="listaordenes.html" target="contenido">Ordenes</a></li>
+
+      </ul>
+    </nav>
+  </body>
+</html>

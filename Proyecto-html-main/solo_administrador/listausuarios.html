@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="css/estilogeneral.css" />
+    <link rel="stylesheet" href="css/estilobarra.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Usuarios</title>
+  </head>
+  <body>
+    <div id="usuarios" class="contenido">
+      <h1>Gestión de Usuarios</h1>
+      <h2>Aquí puedes ver y editar usuarios.</h2>
+      <div>
+        <a href="nuevousuario.html" class="btn-nuevo">+ Nuevo Usuario</a>
+        
+        
+      </div>
+      <div>
+        <table>
+          <tr>
+            <th>Run</th>
+            <th>Nombre Completo</th>
+            <th>Correo electronico</th>
+            <th>Fecha de nacimiento</th>
+            <th>Tipo de Usuario</th>
+            <th>Direccion</th>
+            <th colspan="2">Acciones</th>
+            
+          </tr>
+
+          <tr>
+            <td>12345678-9</td>
+            <td>Pablo Neruda</td>
+            <td>PablitoNeftaliR@gmail.com</td>
+            <td>01-02-1905</td>
+            <td>Cliente</td>
+            <td>Calle falsa 123, Concepción</td>
+            <td>
+              
+            <a href="editarusuario.html?rut=12345678-9&nombre=Pablo&apellido=Neruda&mail=pablito@gmail.com&fecha=1905-02-01&direccion=Calle+falsa+123&tipousuario=Cliente" 
+            class="btn btn-warning btn-sm">Editar</a>
+            </td>
+             <td>
+                <a href="mostrarusuario.html" 
+                 class="btn btn-warning btn-sm">Ver</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>43434312-1</td>
+            <td>Victor Jara</td>
+            <td>VitotoJ@gmail.com</td>
+            <td>01-02-1910</td>
+            <td>Vendedor</td>
+            <td>Calle de mentira 321, Santiago</td>
+            <td>
+              <a href="editarusuario.html?rut=43434312-1&nombre=Victor&apellido=Jara&mail=VitotoJ@gmail.com&fecha=1910-02-01&direccion=Calle+de+mentira+123&tipousuario=Vendedor" 
+   class="btn btn-warning btn-sm">Editar</a>
+            </td>
+              <td>
+                <a href="mostrarusuario.html" 
+                 class="btn btn-warning btn-sm">Ver</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2>⚡LEVEL-UP</h2>
+      <ul>
+        <li><a href="homedmin.html" target="contenido">Home</a></li>
+        <li><a href="listausuarios.html" target="contenido">Usuarios</a></li>
+        <li><a href="listaproductos.html" target="contenido">Productos</a></li>
+        <li><a href="listaordenes.html" target="contenido">Ordenes</a></li>
+
+      </ul>
+    </nav>
+  </body>
+</html>

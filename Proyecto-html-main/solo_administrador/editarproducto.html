@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Producto</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilobarra.css" />
+
+    <link rel="stylesheet" href="css/estilogeneral.css" />
+
+
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2>⚡LEVEL-UP</h2>
+      <ul>
+        <li><a href="homedmin.html" target="contenido">Home</a></li>
+        <li><a href="listausuarios.html" target="contenido">Usuarios</a></li>
+        <li><a href="listaproductos.html" target="contenido">Productos</a></li>
+        <li><a href="listaordenes.html" target="contenido">Ordenes</a></li>
+      </ul>
+    </nav>
+
+    <!--container de la caja de formulario-->
+    <div class="contenido">
+      <div class="container">
+        <div>
+          <div class="row mt-2">
+            <div class="col-sm-7"></div>
+            <div class="col-sm-6">
+              <div class="shadow rounded p-4">
+                <h1 class="text-center">Modificar producto</h1>
+
+                <form
+                  action="listaproductos.html"
+                  class="needs-validation"
+                  method="get"
+                  enctype="multipart/form-data"
+                  novalidate
+                >
+                  
+                    <div class="mb-3 mt-3">
+                    <label for="nombre" class="form-label"
+                      >Codigo de producto:</label>
+                    
+                    <input
+                      type="text"
+                      class="form-control"
+                      onblur="validarCodigo()"
+                      id="codigo"
+                      style="background-image:none; padding-right:0.75rem"
+                      placeholder="Ingrese codigo de producto"
+                      name="codigo"
+                      required
+                    />
+                     <div class="invalid-feedback">
+                      Debe ingresar codigo del producto
+                     </div>
+                     <div 
+                        id="checkcodigo" style="color:rgb(255, 174, 0); margin-top:5px">
+                    </div>
+
+
+                  <div class="mb-3 mt-3">
+                    <label for="nombrep" class="form-label"
+                      >Nombre de producto:</label>
+                    
+                    <input
+                      type="text"
+                      class="form-control"
+                      onblur="validarNombreProducto()"
+                      id="nombrep"
+                      style="background-image:none; padding-right:0.75rem"
+                      placeholder="Ingrese nombre de producto"
+                      name="nombrep"
+                      required
+                    />
+                     <div class="invalid-feedback">
+                      Debe ingresar nombre del producto
+                     </div>
+                     <div 
+                        id="checknombrep" style="color:rgb(255, 174, 0); margin-top:5px">
+                    </div>
+
+
+                     <div class="mb-3 mt-3">
+                    <label for="descripcion" class="form-label"
+                      >Descripcion de producto:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="descripcion"
+                      style="background-image:none; padding-right:0.75rem" 
+                      onblur="validarDescripcion()"
+                      placeholder="Ingrese descripcion"
+                      name="descripcion"
+                    />      
+                    <div class="invalid-feedback">
+                      Debe ingresar descripcion
+                    </div>
+                    <div 
+                        id="checkdescripcion" style="color:rgb(255, 174, 0); margin-top:5px">
+                    </div>
+                  </div>
+
+
+                  <div class="mb-3 mt-3">
+                    <label for="precio" class="form-label"
+                      >Ingresar precio del producto:</label
+                    >
+                    <input
+                      type="number"
+                      step = "any" 
+                      class="form-control"
+                      onblur="validarPrecio()"
+                      id="precio"
+                      style="background-image:none; padding-right:0.75rem"
+                      placeholder="Ingrese precio"
+                      name="precio"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Debe ingresar precio del producto
+                    </div>
+                    <div 
+                        id="checkprecio" style="color:rgb(255, 174, 0); margin-top:5px">
+                    </div>
+                  </div>
+                
+
+
+                  <div class="mb-3 mt-3">
+                    <label for="stockactual" class="form-label">Debe ingresar stock Actual:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="stockactual"
+                      style="background-image:none; padding-right:0.75rem"
+                      onblur="validarStockActual()"
+                      placeholder="Ingrese stock actual"
+                      name="stockactual"
+                      required
+                    />
+                    <div class="invalid-feedback">Stock no válido</div>
+                  </div>
+                   <div 
+                        id="checkstockactual" style="color:rgb(255, 174, 0); margin-top:5px">
+                   </div>
+                 
+
+
+                  <div class="mb-3 mt-3">
+                    <label for="stockcritico" class="form-label">Stockcritico:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="stockcritico"
+                      onblur = "validarStockCritico()"
+                      style="background-image:none; padding-right:0.75rem" 
+                      placeholder="Ingrese stock critico"
+                      name="stockcritico"
+                     
+                    />
+                    <div class="invalid-feedback">Debe ingresar stock critico</div>
+                    <div 
+                        id="checkstockcritico" style="color:rgb(255, 174, 0); margin-top:5px">
+                   </div>
+                  </div>
+
+
+                                        <!-- Categoria -->
+                   <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoria:</label>
+                        <select class="form-control" id="categoria" name="categoria" required>
+                        <option value="">Seleccione...</option>
+                          <option value="Juegos de Mesa">Juegos de mesa</option>
+                        <option value="Accesorios">Accesorios</option>
+                        <option value="Consola">Consola</option>
+                        <option value="Computadores Gamers">Computadores Gamers</option>
+                        <option value="Sillas Gamers">Sillas Gamers</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Mousepad">Mousepad</option>
+                        <option value="Poleras Personalizadas">Poleras Personalizadas</option>
+                        </select>
+                        <div class="invalid-feedback">Debe seleccionar una categoria</div>
+                   </div>
+
+
+                    <!--Insertar una imagen-->
+
+                    <div class="mb-2 text-center">
+                    <label for="imagen" class="form-label">Imagen del producto:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*"><br><br>
+                    </div>
+
+              <div class="mt-3 text-center d-grid gap-2 d-md-flex justify-content-center">
+                <input  type="submit" 
+                        class="btn-success btn-md me-md-2" 
+                        value="Guardar cambios" />
+                <a href="listaproductos.html" class="btn btn-md btn-secondary" >Cancelar</a>
+              </div>
+              
+
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script >
+    // Rellenar el formulario con datos desde la URL (simulación básica)
+    const params = new URLSearchParams(window.location.search);
+  document.getElementById("codigo").value      = params.get("codigo") || "";
+  document.getElementById("nombrep").value     = params.get("nombre") || "";
+  document.getElementById("categoria").value   = params.get("categoria") || "";
+  document.getElementById("descripcion").value = params.get("descripcion") || "";
+  document.getElementById("precio").value      = params.get("precio") || "";
+  document.getElementById("stockactual").value = params.get("stockActual") || "";
+  document.getElementById("stockcritico").value= params.get("stockCritico") || "";
+  </script>
+  
+    <script>
+  // Script de validación de Bootstrap
+  (function () {
+    "use strict";
+
+    // Selecciona todos los formularios con la clase needs-validation
+    var forms = document.querySelectorAll(".needs-validation");
+
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault(); // ❌ evita enviar
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated"); // ✅ activa los estilos de error
+        },
+        false
+      );
+    });
+  })();
+</script>
+
+    <script src="JS/FuncionesFormularioProducto.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos de Mesa - LevelUp Gamer</title>
+        <!-- Bootswatch primero -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    
+
+    <!-- Tu CSS personalizado después -->
+    <link rel="stylesheet" href="../solo_administrador/css/estilogeneral.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-levelup">
+         
+      <div class="container-fluid">
+             
+        <a class="navbar-brand d-flex align-items-center" href="#">
+                  Level-Up⚡Gamer   
+        </a>
+          
+        <button
+          class="navbar-toggler mx-auto d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>   
+        </button>
+
+          
+        <div class="collapse navbar-collapse" id="navbarNav">
+             
+          <ul class="navbar-nav mx-auto gap-5">
+                
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+                     
+            <li class="nav-item">
+              <a class="nav-link" href="categorias.html">Categorías</a>
+            </li>
+
+                
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Iniciar Sesión</a>
+            </li>
+                
+            <li class="nav-item">
+              <a class="nav-link" href="RegistroUsuarios.html">Registro</a>
+            </li>
+                     
+            <li class="nav-item">
+              <a class="nav-link" href="usuario.html">Mi Cuenta</a>
+            </li>
+
+            <a href="carrito.html" class="btn btn-outline-light">
+                 <i class="bi bi-cart4"></i> Carrito    
+          </a>
+               
+          </ul>
+             
+          
+            
+        </div>
+         
+      </div>
+      
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Juegos de Mesa</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="C:\Users\Admn\Desktop\Fullstack2\LevelUp\img\Juego de Mesa Catan.jpg" class="card-img-top" alt="Juego de Mesa Catan">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Juego de Mesa Catan</h5>
+                        <p class="card-text">$29.990 CLP</p>
+                        <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#productModalCatan">
+                            Ver Producto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModalCatan" tabindex="-1" aria-labelledby="productModalLabelCatan" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabelCatan">Juego de Mesa Catan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="C:\Users\Admn\Desktop\Fullstack2\LevelUp\img\Juego de Mesa Catan.jpg" class="img-fluid mb-3"
+                        alt="Juego de Mesa Catan">
+                    <p>Un clásico juego de estrategia donde los jugadores compiten por recursos y territorio para construir el asentamiento más poderoso.</p>
+                    <p class="fw-bold fs-4">$29.990 CLP</p>
+                    <div class="row align-items-center g-2">
+                        <div class="col-4">
+                            <label for="quantityCatan" class="form-label mb-0">Cantidad:</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="number" class="form-control" id="quantityCatan" value="1" min="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- BOTÓN MODIFICADO PARA AGREGAR AL CARRITO -->
+                    <button type="button" class="btn btn-success" 
+                        onclick="agregarAlCarrito('juego-de-mesa-catan', 'Juego de Mesa Catan', 29990)">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <hr>
+        <h4 class="mb-4">Comentarios del Producto</h4>
+        <div class="card bg-secondary text-white p-3">
+            <p class="text-center">Debes <a href="login.html" class="link-primary">iniciar sesión</a> para dejar un comentario.</p>
+        </div>
+    </div>
+
+    <footer class="bg-primary text-center text-white py-3 mt-5">
+        <p class="mb-0">&copy; 2025 Level-Up Gamer - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPT PARA EL CARRITO -->
+    <script>
+        function agregarAlCarrito(id, nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            const productoExistente = carrito.find(item => item.id === id);
+
+            if (productoExistente) {
+                productoExistente.cantidad += 1;
+            } else {
+                carrito.push({
+                    id: id,
+                    nombre: nombre,
+                    precio: precio,
+                    cantidad: 1
+                });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert(`"${nombre}" se ha agregado al carrito.`);
+        }
+    </script>
+
+</body>
+
+</html>

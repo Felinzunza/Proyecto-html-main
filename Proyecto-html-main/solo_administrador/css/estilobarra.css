@@ -1,0 +1,91 @@
+/* Sidebar base — conservando tus colores */
+.sidebar { position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 180px; 
+    height: 100%; 
+    background: #42156b; 
+    color: #fff; 
+    padding: 20px 0; 
+    font-family: 'Orbitron', sans-serif !important; 
+    font-size: 16px !important; 
+    line-height: 1.2 !important; 
+    letter-spacing: 1px !important; 
+}
+.sidebar h2 { font-size: 20px !important; 
+    font-weight: bold !important; 
+    margin: 20px 0 !important; /* margen arriba y abajo */ 
+    text-align: center !important; } 
+    
+.sidebar ul { list-style: none !important; padding-left: 0 !important; } 
+
+.sidebar a { display: block !important; 
+    padding: 10px 20px !important; 
+    font-weight: bold !important; 
+    text-decoration: none !important; 
+    font-size: 22px !important; 
+    color: yellow !important; 
+    transition: color 0.3s ease; /* efecto suave al pasar el mouse */ } 
+    
+.sidebar a:hover { color: red !important; }
+
+
+
+/* Botón hamburguesa — oculto en escritorio */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: yellow; /* combina con tu tema */
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* --- Solo cambia el comportamiento en móvil --- */
+/* ===== Responsive: Sidebar se convierte en Header ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    font-family: 'Orbitron', sans-serif !important; 
+    background: #42156b; 
+    color: #fff; 
+    font-size: 16px !important; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .sidebar h2 {
+    margin: 5px 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    list-style: none;
+  }
+
+  .sidebar a {
+    font-size: 18px !important;
+    padding: 5px 10px !important;
+  }
+
+
+}

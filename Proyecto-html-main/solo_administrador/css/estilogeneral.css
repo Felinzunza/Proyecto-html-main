@@ -1,0 +1,338 @@
+
+.contenido {
+  
+  
+  margin-top: 30px;
+  margin-left: 250px; /* igual al ancho del sidebar */
+  display: flex;
+  flex-direction: column;
+  justify-content:  flex-start; /* centra verticalmente */
+  padding: 40px;
+
+}
+
+body {
+  margin-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+
+}
+
+h1 {
+  margin-top: 20px;
+  font-family: Orbitron;
+  color: yellow;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.contenido h1, h2 {
+  
+  display: inline-block;     /* hace que el texto mida su propio ancho */
+  min-width: fit-content;    /* mantiene la línea completa mientras haya lugar */
+  text-align: center;
+  white-space: normal;       /* permite el salto cuando ya no cabe */
+  word-break: keep-all;      /* evita cortes prematuros */
+  overflow-wrap: break-word; /* deja romper si realmente no entra */
+}
+
+h2 {
+  font-family: Orbitron;
+  font-size: 25px;
+  color: white;
+}
+
+
+p {
+  
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  color: #D3D3D3;
+
+}
+
+.elemento{
+  color: white
+}
+
+.text-desc{
+  color: rgb(238, 255, 0);
+}
+.Desc-global{
+  -webkit-text-stroke: 0.01px yellow; 
+  color:rgb(255, 115, 0)
+  
+}
+
+
+.form-label {
+  color: whitesmoke;
+}
+
+/*caja de formulario*/
+.shadow {
+  background-color: #42156b;
+}
+
+.invalid-feedback{
+  color: yellow
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px;
+  text-align: left;
+  background-color: #42156b;
+}
+
+th {
+  background-color: #6d2eb7;
+  font-weight: bold;
+}
+
+
+/*boton para crear nuevo usuario, nuevo producto*/
+.btn-nuevo {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #42156b;
+  color: yellow;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-nuevo:hover {
+  background-color: yellow;
+  color: #42156b;
+}
+
+
+
+
+
+.alerta {
+  background-color: yellow; /* rojo claro */
+  color: red;           /* rojo fuerte */
+  font-weight: bold;
+
+}
+
+.btn-celda {
+  color:#42156b;
+  font-size: x-large;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  
+}
+
+.btn-warning {
+  color: yellow;
+ 
+}
+
+
+/* Estilo al input file */
+input[type="file"] {
+  color: yellow;   /* texto "Sin archivos seleccionados" en amarillo */
+  
+}
+
+/* Estilo al botón de seleccionar imagenes*/
+input[type="file"]::file-selector-button {
+  background-color: yellow; 
+  color: #42156b;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*Boton de enviar, registrar o guardar cambios*/
+.btn-success{
+  background-color: forestgreen; 
+  color: whitesmoke;
+  font-weight: bold;
+}
+.btn-success:hover{
+  background-color: green; 
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+
+/*boton secundario comopara mostrar, cancelar o volver*/
+.btn-secondary{
+  background-color: gray;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.btn-editar{
+  background-color: forestgreen;
+  color: whitesmoke;
+  font-weight: bold;
+  
+}
+.btn-editar:hover{
+  background-color: green;
+  color: whitesmoke;
+  font-weight: bold;
+  
+}
+
+
+/*caja para mostrar producto, usuario, orden, etc*/
+.card-body {
+  background: #42156b;
+  color: yellow;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(155, 64, 216, 0.1);
+  
+}
+
+
+.table-responsive {
+  overflow-x: visible; /* muestra todo normalmente */
+}
+
+
+/*Estilo navbar*/
+.navbar-levelup {
+  background-color: #42156b !important; /* reemplaza el azul de bg-primary */
+  
+  box-shadow: 0px 2px 10px rgba(255, 255, 0, 0.3);
+}
+
+.nav-link{
+  font-family: 'Orbitron', sans-serif !important; 
+  color: yellow;
+}
+
+
+
+/*Estilo cartas de catalogo*/
+.card-img-top {
+  width: 250px;    /* ocupa todo el ancho de la tarjeta */
+  height: 250px;   /* mantiene proporción */
+  margin: 0 auto; 
+}
+
+.btn-agregar-carrito{
+  background-color: yellow;
+  color: #42156b;
+  font-weight: bold;
+}
+.card-text{
+  color: white !important;
+}
+
+/*Categoria*/
+.card-cat{
+  background-color: #42156b;
+  color: yellow;
+}
+
+
+/* --- Responsividad del contenido --- */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: auto;
+  }
+
+   .table-responsive {
+    overflow-x: auto; /* scroll solo si hace falta */
+    -webkit-overflow-scrolling: touch; /* scroll suave en móviles */
+  }
+
+  .contenido {
+    
+    padding-top: 50px; /* espacio debajo del header */
+    padding-left: 10px; /* opcional: espacio lateral */
+    padding-right: 10px; 
+    padding-bottom: 10px;
+    margin-left: 0 !important;
+    margin-top: 120px !important; /* espacio para el nuevo header */
+    
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .btn, .form-control, input, select {
+    width: 100% !important;
+  }
+
+  .card-body {
+  background: #42156b;;
+  color: yellow;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(155, 64, 216, 0.1);
+    
+  
+}
+
+  .encabezado {
+    font-size: 13px;
+  }
+
+  .elemento {
+    border-bottom: 1px solid #6c3cb3;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+
+  .row.border-top {
+    font-size: 14px;
+  }
+
+  
+  
+
+
+
+
+
+
+
+}

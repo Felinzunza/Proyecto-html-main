@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuarios - Tienda Gamer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tu CSS personalizado después -->
+    <link rel="stylesheet" href="../solo_administrador/css/estilogeneral.css" />
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-levelup">
+         
+      <div class="container-fluid">
+             
+        <a class="navbar-brand d-flex align-items-center" href="#">
+                  Level-Up⚡Gamer   
+        </a>
+          
+        <button
+          class="navbar-toggler mx-auto d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>   
+        </button>
+
+          
+        <div class="collapse navbar-collapse" id="navbarNav">
+             
+          <ul class="navbar-nav mx-auto gap-5">
+                
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+                     
+            <li class="nav-item">
+              <a class="nav-link" href="categorias.html">Categorías</a>
+            </li>
+
+                
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Iniciar Sesión</a>
+            </li>
+                
+            <li class="nav-item">
+              <a class="nav-link" href="RegistroUsuarios.html">Registro</a>
+            </li>
+                     
+            <li class="nav-item">
+              <a class="nav-link" href="usuario.html">Mi Cuenta</a>
+            </li>
+
+            <a href="carrito.html" class="btn btn-outline-light">
+                 <i class="bi bi-cart4"></i> Carrito    
+          </a>
+               
+          </ul>
+             
+          
+            
+        </div>
+         
+      </div>
+      
+    </nav>
+
+
+    <div class="container">
+    <div class="row justify-content-center mt-5 mb-5">
+      <div class="col-md-6">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Registro de Usuarios</h2>
+
+             <form action="usuario.html" method="POST" class="needs-validation" novalidate>
+
+              <div class="mb-3 mt-3">
+                <label for="nombre" class="form-label">Nombre de usuario:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  onblur="validarNombre()"
+                  id="nombre"
+                  placeholder="Ingrese nombre"
+                  name="nombre"
+                  required
+                />
+                <div class="invalid-feedback">Debe ingresar nombre.</div>
+                <div id="checknombre" style="color: rgb(255, 174, 0); margin-top: 5px"></div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="apellido" class="form-label">Apellidos de usuario:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  onblur="validarApellido()"
+                  placeholder="Ingrese apellidos"
+                  name="apellido"
+                  required
+                />
+                <div class="invalid-feedback">Debe ingresar apellidos.</div>
+                <div id="checkapellido" style="color: rgb(255, 174, 0); margin-top: 5px"></div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="rut" class="form-label">Ingresar rut:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  onblur="validarRut()"
+                  id="rut"
+                  placeholder="Ingrese rut"
+                  name="rut"
+                  required
+                />
+                <div class="invalid-feedback">Debe ingresar rut.</div>
+                <div id="checkrut" style="color: rgb(255, 174, 0); margin-top: 5px"></div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="mail" class="form-label">E-mail:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="mail"
+                  onblur="validarEmail()"
+                  placeholder="Ingrese correo electrónico"
+                  name="mail"
+                  required
+                />
+                <div class="invalid-feedback">Correo no válido.</div>
+                <div id="checkemail" style="color: rgb(255, 174, 0); margin-top: 5px"></div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="pass" class="form-label">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pass"
+                  placeholder="Ingrese clave"
+                  name="pass"
+                  required
+                />
+                <div class="invalid-feedback">Debe ingresar password.</div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="repass" class="form-label">Reingrese Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="repass"
+                  onblur="validarPass()"
+                  placeholder="reingrese clave"
+                  name="repass"
+                  required
+                />
+                <div class="invalid-feedback">Debe reingresar password.</div>
+                <div id="checkpass" style="color: rgb(255, 174, 0); margin-top: 5px"></div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="fecha" class="form-label">Fecha de nacimiento:</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fecha"
+                  onblur="validarFecha()"
+                  name="fecha"
+                  required
+                />
+                <div class="invalid-feedback">Debe ingresar una fecha válida.</div>
+                <div id="checkfecha" style="color: rgb(255, 174, 0); margin-top: 5px"></div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="direccion" class="form-label">Direccion:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  onblur="validarDireccion()"
+                  id="direccion"
+                  placeholder="Ingrese direccion"
+                  name="direccion"
+                  required
+                />
+                <div class="invalid-feedback">Debe ingresar dirección.</div>
+                <div id="checkdireccion" style="color: rgb(255, 174, 0); margin-top: 5px"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="region" class="form-label">Región:</label>
+                <select class="form-control" id="region" name="region" required onblur="validarRegion()">
+                  <option value="" selected disabled>Seleccione una región</option>
+                  <option value="Metropolitana">Metropolitana</option>
+                  <option value="Valparaíso">Valparaíso</option>
+                  <option value="Biobío">Biobío</option>
+                </select>
+                <div class="invalid-feedback">Debe seleccionar una región.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="comuna" class="form-label">Comuna:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  onblur="validarComuna()"
+                  id="comuna"
+                  placeholder="Ingrese la comuna"
+                  name="comuna"
+                  required
+                />
+                <div class="invalid-feedback">Debe ingresar la comuna.</div>
+              </div>
+
+              <div class="mt-4 text-center">
+                                <input
+                  class="btn btn-lg btn-success px-5"
+                  type="submit"
+                  value="Registrar"
+                />
+                <input
+                  class="btn btn-lg btn-danger px-5"
+                  type="reset"
+                  value="Limpiar"
+                />
+              </div>
+            </form>
+                          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+    <footer class="bg-primary text-center text-white py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Tienda Gamer - Todos los derechos reservados</p>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="FuncionesFormularioUsuario.js"></script>
+
+    <script>
+        function activarValidacionBootstrap() {
+            'use strict';
+
+            const form = document.querySelector('.needs-validation'); 
+
+            if (form) {
+                form.addEventListener('submit', event => {
+                    // La validación combinada de Bootstrap y funciones personalizadas
+                    const esValido = form.checkValidity() && validarPass() && validarRut() && validarNombre() && validarApellido() && validarEmail() && validarDireccion() && validarFecha() && validarRegion() && validarComuna();
+                    
+                    if (!esValido) {
+                        event.preventDefault(); // Detiene el envío
+                        event.stopPropagation();
+                    } else {
+                        // --- INICIO CÓDIGO CLAVE: GUARDAR DATOS ---
+                        event.preventDefault(); // IMPORTANTE: Detenemos el envío automático temporalmente
+
+                        // 1. Crear un objeto con los datos del formulario
+                        const datosUsuario = {
+                            nombre: document.getElementById('nombre').value,
+                            apellido: document.getElementById('apellido').value,
+                            rut: document.getElementById('rut').value,
+                            mail: document.getElementById('mail').value,
+                            fechaNac: document.getElementById('fecha').value,
+                            direccion: document.getElementById('direccion').value,
+                            region: document.getElementById('region').value,
+                            comuna: document.getElementById('comuna').value
+                            // NOTA: La contraseña no se guarda por seguridad, solo se usa para validación.
+                        };
+
+                        // 2. Guardar el objeto en LocalStorage como una cadena JSON
+                        localStorage.setItem('usuarioRegistrado', JSON.stringify(datosUsuario));
+
+                        // 3. Redirigir manualmente a la página del usuario
+                        window.location.href = "usuario.html";
+                        // --- FIN CÓDIGO CLAVE ---
+                    }
+
+                    form.classList.add('was-validated'); 
+                });
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", activarValidacionBootstrap);
+    </script>
+</body>
+
+</html>
